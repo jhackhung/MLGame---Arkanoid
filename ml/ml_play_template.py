@@ -20,11 +20,13 @@ class MLPlay:
 
         if not self.ball_served:
             self.ball_served = True
-            command = "SERVE_TO_LEFT"
+            command = "SERVE_TO_LEFT" # 將球發往左邊
         else:
-            command = "MOVE_LEFT"
+            # ***以下為程式撰寫的地方
+            command = "MOVE_LEFT" # 此為將板子向左移動移動
 
-        return command
+
+        return command # 回傳 command
 
     def reset(self):
         """
