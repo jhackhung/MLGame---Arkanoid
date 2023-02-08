@@ -23,11 +23,11 @@ class MLPlay:
             self.ball_served = True
             command = "SERVE_TO_LEFT"
         else:
-            command = "NONE"
-            
-            if scene_info['ball'][0] < scene_info['platform'][0]+20:
+            # 範圍
+
+            if scene_info['ball'][0] < scene_info['platform'][0]:
                 command = "MOVE_LEFT"
-            elif scene_info['ball'][0] > scene_info['platform'][0]+20:
+            elif scene_info['ball'][0] > scene_info['platform'][0]+40:
                 command = "MOVE_RIGHT" 
             else:
                 command = "NONE"
@@ -39,30 +39,4 @@ class MLPlay:
         Reset the status
         """
         self.ball_served = False
-
-            # if scene_info['ball'][1] > 200:
-            #     if scene_info['platform'][0] != scene_info['ball'][0] + 25:
-            #         if scene_info['platform'][0] > scene_info['ball'][0] + 25:
-            #             command = "MOVE_LEFT"
-                    
-            #         elif scene_info['platform'][0] < scene_info['ball'][0] + 25:
-            #             command = "MOVE_RIGHT"
-                    
-            #         else:
-            #             command = "NONE"
-
-            #     elif scene_info['platform'][0] != scene_info['ball'][0] - 35:
-            #         if scene_info['ball'][1] > 300:
-            #             if scene_info['platform'][0] > scene_info['ball'][0]:
-            #                 command = "NONE"
-            #             else:
-            #                 command = "MOVE_LEFT"    
-
-            #         if scene_info["platform"][0] < scene_info['ball'][0] - 35:
-            #             command = "MOVE_RIGHT"
-
-            #         elif scene_info['platform'][0] > scene_info['ball'][0] - 35:
-            #             command = "MOVE_LEFT"
-                    
-            #         else:
-            #             command = "NONE"
+        
