@@ -31,11 +31,11 @@ class MLPlay:
             if (self.loc[0] != scene_info["ball"][0]):
                 a = (self.loc[1] - scene_info["ball"][1]) / (self.loc[0] - scene_info["ball"][0])
                 b = scene_info["ball"][1] - (a * scene_info["ball"][0])
-                x = (393 - b) / a
+                x = (395 - b) / a
 
                 if(x < 0 or x > 200):   #反摺
                     b = scene_info["ball"][1] - ((-1/a) * scene_info["ball"][0])
-                    x = (393 - b) * a * (-1)
+                    x = (395 - b) * a * (-1)
             
             # if 0 < x < 200:  # debug
             #     print(f"y = {a}x + {b}")
