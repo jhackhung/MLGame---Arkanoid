@@ -37,10 +37,10 @@ class MLPlay:
                     b = scene_info["ball"][1] - ((-1/a) * scene_info["ball"][0])
                     x = (395 - b) * a * (-1)
             
-            # if 0 < x < 200:  # debug
-            #     print(f"y = {a}x + {b}")
-            #     print(x)
-            #     print("                                ")
+            # debug
+            # print(f"y = {a}x + {b}")
+            # print(x)
+            # print("                                ")
             # print(scene_info["ball"], " ", self.loc, " ", scene_info["platform"])
 
             if (0 < x < 200):
