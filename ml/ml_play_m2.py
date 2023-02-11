@@ -33,15 +33,14 @@ class MLPlay:
                 a = (self.loc[1] - scene_info["ball"][1]) / (self.loc[0] - scene_info["ball"][0])
                 b = scene_info["ball"][1] - (a * scene_info["ball"][0])
                 x = ((400 - b) / a) % 400
-                p = 200 - abs(200 - x)
+                p = 200 - abs(200 - x) # p 為預測位置
 
-            if p < scene_info["platform"][0] + 15:
+            if p < scene_info["platform"][0] + 20:
                 command = "MOVE_LEFT"
-            elif p > scene_info["platform"][0] + 35:
+            elif p > scene_info["platform"][0] + 20:
                 command = "MOVE_RIGHT"
             else:
                 command = "NONE" 
-
 
             self.loc = scene_info["ball"]   # Record previous ball location
         return command
